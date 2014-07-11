@@ -1,0 +1,26 @@
+name:                happsite
+version:             0.1.0.0
+synopsis:            Simple site written on Haskell and Happstack.
+license:             MIT
+license-file:        LICENSE
+author:              Alexander Krupenkin
+maintainer:          mail@akru.me
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable happsite
+  main-is:             Main.hs
+  other-extensions:    OverloadedStrings
+                     , DeriveDataTypeable
+                     , GeneralizedNewtypeDeriving
+                     , TemplateHaskell
+  build-depends:       base >=4.6 && <4.8
+                     , happstack-lite
+                     , blaze-html
+                     , text
+                     , happstack-server
+                     , web-routes
+                     , web-routes-th
+                     , web-routes-happstack
+  default-language:    Haskell2010
